@@ -21,8 +21,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 dotenv.config();
-const mongodb_URL = process.env.MONGODB_URL;
-
+// const mongodb_URL = process.env.MONGODB_URL;
+ const mongodb_URL = "mongodb+srv://pratheek0599:kvwKXSZGuvt9HMd0@cluster0.r3sbb.mongodb.net/";
 export const connectDB = async () => {
   // Removed req and res
   try {
