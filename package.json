@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Mtahivathana",
+  "author": "Pratheek",
   "license": "ISC",
   "description": "artvista-gallery",
   "dependencies": {
