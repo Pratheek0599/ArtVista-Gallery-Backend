@@ -7,8 +7,8 @@ ArtVista Gallery
 
 #### BASEURL
 
-<p>Frontend:https://artvista-gallery-frontend-mathi.vercel.app</p>
-<p>Backend:https://artvista-backend-1zpu.onrender.com</p>
+<p>Frontend:https://artvista-gallery-pratheek0599.netlify.app/</p>
+<p>Backend:https://artvista-gallery-backend-oaz0.onrender.com</p>
 
 ### Key Features
 
@@ -36,7 +36,3 @@ ArtVista Gallery
 <li>Database:MongoDB</li>
 <li>Payment Integration:Stripe</li>
 <li>Image Storage:Multer</li>
-
-
-## API DOCUMENTATION
-https://documenter.getpostman.com/view/34950603/2sA3duECNb
