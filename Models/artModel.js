@@ -27,6 +27,6 @@ export const artSchema = new mongoose.Schema({
   },
 });
 
-const artModel=mongoose.model("Art",artSchema);
+const artModel = mongoose.model("Art", artSchema);
 
 export default artModel;

@@ -4,7 +4,7 @@ import fs from "fs";
 //creating art item
 
 export const createArt = async (req, res) => {
-  const image_filename = `${req.file.filename}`;
+  const image_filename = `${req?.file?.filename}`;
 
   const newArt = new artModel({
     name: req.body.name,
@@ -16,7 +16,9 @@ export const createArt = async (req, res) => {
   });
   try {
     await newArt.save();
-    res.status(200).json({ message: "Art added to cart succesfully",data:newArt });
+    res
+      .status(200)
+      .json({ message: "Art added to cart succesfully", data: newArt });
   } catch (error) {
     console.log(error);
     res
@@ -30,6 +32,7 @@ export const createArt = async (req, res) => {
 export const getAllArt = async (req, res) => {
   try {
     const arts = await artModel.find();
+    console.log(arts, "from arts");
     res.status(200).json({ message: "getting all the arts", data: arts });
   } catch (error) {
     console.log(error);
@@ -96,18 +99,20 @@ export const editArt = async (req, res) => {
 
 //getting art item by id
 
-export const getArtById=async(req,res)=>{
-try {
-  const artId=req.params.id;
-  const artItem=await artModel.findById(artId)
-  if(!artItem){
-  return res.status(400).json({message:"art item not found"})
-  }
-  res.status(200).json({message:"getting art by particular id",data:artItem})
-} catch (error) {
-  console.log(error);
+export const getArtById = async (req, res) => {
+  try {
+    const artId = req.params.id;
+    const artItem = await artModel.findById(artId);
+    if (!artItem) {
+      return res.status(400).json({ message: "art item not found" });
+    }
     res
-      .status(500)
-      .json({ message: "Internal server Error in getting  the particular art" });
-}
-}
+      .status(200)
+      .json({ message: "getting art by particular id", data: artItem });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "Internal server Error in getting  the particular art",
+    });
+  }
+};
